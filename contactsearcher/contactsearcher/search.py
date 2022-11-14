@@ -20,12 +20,12 @@ def search_for_email_given_job(job_description: str, contacts: str) -> List[List
         # doThis: iterate through each line of the file and extract the current job
         # ---> doThis: extract the current job for the contact on this line of the CSV
         for row in file:
-            print(row[contacts], row[job])
-            List[contacts] = [job]
+            print(row[contacts], row[job_description])
+            List[contacts] = [job_description]
 
     # ---> doThis: the job description matches and thus we should save it in the list
-    for contacts, job in List:
-        if job == main.job_description:
+    for contacts, job_description in List:
+        if job_description == main.job_description:
             # doThis: return the list of the contacts who have a job description that matches
             return True
         else:
